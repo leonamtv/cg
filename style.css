@@ -1,0 +1,124 @@
+:root {
+    --light-background : white;
+    --dark-background : rgb(47, 47, 53);
+    
+    --light-color : rgb(58, 117, 206);
+    --dark-color : white;
+    
+    --light-shadow : rgb(58, 117, 206, 0.3);
+    --light-shadow-hover : rgb(58, 117, 206, 0.4);
+    
+    --dark-shadow : rgba(0, 0, 0, 0.3);
+    --dark-shadow-hover : rgba(0, 0, 0, 0.4);
+}
+
+.light {
+    --bg : var(--light-background);
+    --color : var(--light-color);
+    --shadow : var(--light-shadow);
+    --hover-shadow : var(--light-shadow-hover);
+}
+
+.dark {
+    --bg : var(--dark-background);
+    --color : var(--dark-color);
+    --shadow : var(--dark-shadow);
+    --hover-shadow : var(--dark-shadow-hover);
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.title {
+    position: fixed;
+    display: grid;
+    width: 100vw;
+    height : 6vh;
+    background: var(--bg);
+    grid-template-columns: 5% 25% 70%;
+    vertical-align: middle;
+    padding : 15px; 
+}
+
+.title img {
+    cursor: pointer;
+    display: inline-block;
+    width : 50px;
+    margin-right: 20px;
+}
+
+.title h1 {
+    font-size: 40px;
+    display: inline-block;
+    margin-right : 20px;
+    color: var(--color);
+}
+
+.title div {
+    float: right;
+    margin-right: 20px;
+}
+
+button {
+    margin-right: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    outline: 0;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 1px var(--shadow);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0px 0px 30px 1px var(--hover-shadow); 
+}
+
+#light {
+    background-color: var(--light-background);
+    color : var(--light-color);
+}
+
+#dark {
+    background-color: var(--dark-background);
+    color : var(--dark-color);
+}
+
+.wrapper {
+    display: inline-block;
+    position: absolute;
+    left : 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    cursor: pointer;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.wrapper div {
+    color : var(--color);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    display: inline-block;
+    background: var(--bg);
+    padding: 40px 60px;
+    box-shadow: 0px 0px 29px 1px var(--shadow);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.wrapper div:hover {
+    box-shadow: 0px 0px 80px 1px var(--hover-shadow);
+}

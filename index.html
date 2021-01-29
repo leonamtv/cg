@@ -3,41 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Computação gráfica</title>
-    <style>
-        *{
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
-            padding: 0;
-        }
-
-        .wrapper {
-            display: inline-block;
-            position: absolute;
-            left : 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-        a {
-            padding : 25px 40px;
-            color : white;
-            background-color: rgb(120, 48, 48);
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 2px 2px 26px 2px rgba(137, 47, 47,0.32);
-            transition: box-shadow 0.3s ease-in-out;
-        }
-
-        a:hover {
-            box-shadow: 2px 2px 26px 2px rgba(137, 47, 47, 0.8);
-        }
-    </style>
+    <link rel='stylesheet' href="style.css">
+    <script defer src="script.js"></script>
 </head>
-<body>
-    <div class='wrapper'>
-        
-        <a href='./primeiro_tutorial/index.html'>Primeiro tutorial</a>
+<body class='light'>
+    <div class='title'>
+        <img title='Ir para meu site' id='logo' src='https://raw.githubusercontent.com/leonamtv/leonamtv/a57973a76f263bb79d14f37b47e83095bccc59ae/src/assets/personallogo.svg'> 
+        <h1>
+            Leonam T. V.
+        </h1>
+        <div>
+            <button title='Mudar para o tema light' id='light'>light</button>
+            <button title='Mudar para o tema dark' id='dark'>dark</button>
+        </div>
+    </div>
+    <div class='wrapper' id='wrapper'>
+        <div title='Ir para o primeiro tutorial' id='primeiro_tutorial'> Primeiro tutorial </div>
+        <div title='Ir para o segundo tutorial' id='segundo_tutorial'> Segundo tutorial </div>
     </div>
 </body>
 </html>
