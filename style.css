@@ -42,7 +42,7 @@ body {
     width: 100vw;
     height : 6vh;
     background: var(--bg);
-    grid-template-columns: 5% 65% 30%;
+    grid-template-columns: 5% 78% 16%;
     vertical-align: middle;
     padding : 15px; 
 }
