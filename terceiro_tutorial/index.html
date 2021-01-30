@@ -231,7 +231,7 @@
                     vec3.set(translation, -size * 3, -size, 0);
                     mat4.translate(mMatrix, mMatrix, translation);
                     mPushMatrix();
-                    mat4.rotate(mMatrix, mMatrix, degToRad(rTri), [0, 1, 0]);
+                    mat4.rotate(mMatrix, mMatrix, degToRad(rQuad), [0, 1, 0]);
                     gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
                     gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, squareVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
                     gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexColorBuffer);
@@ -243,7 +243,7 @@
                         vec3.set(translation, size, 0.0, 0.0);
                         mat4.translate(mMatrix, mMatrix, translation);
                         mPushMatrix();
-                        mat4.rotate(mMatrix, mMatrix, degToRad(rTri), [0, 1, 0]);
+                        mat4.rotate(mMatrix, mMatrix, degToRad(rQuad), [0, 1, 0]);
                         gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
                         gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, squareVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
                         setMatrixUniforms();
@@ -258,7 +258,7 @@
                     vec3.set(translation, -size * 3, -size, 0);
                     mat4.translate(mMatrix, mMatrix, translation);
                     mPushMatrix();
-                    mat4.rotate(mMatrix, mMatrix, degToRad(rQuad), [0, -1, 0]);
+                    mat4.rotate(mMatrix, mMatrix, degToRad(rTri), [0, -1, 0]);
                     gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
                     gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, triangleVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
                     gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexColorBuffer);
@@ -270,7 +270,7 @@
                         vec3.set(translation, size, 0, 0);
                         mat4.translate(mMatrix, mMatrix, translation);
                         mPushMatrix();
-                        mat4.rotate(mMatrix, mMatrix, degToRad(rQuad), [0, -1, 0]);
+                        mat4.rotate(mMatrix, mMatrix, degToRad(rTri), [0, -1, 0]);
                         gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
                         gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, triangleVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
                         setMatrixUniforms();
