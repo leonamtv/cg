@@ -2,6 +2,14 @@
 
 Esse repositório contém os trabalhos da disciplina de computação gráfica do curso de engenharia de computação CEFET-MG campus Timóteo 2020.2.
 
+<table>
+    <tr>
+        <td>
+            <iframe href='https://leonamtv.github.io/cg/primeiro_tutorial/index.html'></iframe>
+        </td>
+    </tr>
+</table>
+
 ## Table of Contents
 
 - [Repositório da disciplina de CG](#repositório-da-disciplina-de-cg)
