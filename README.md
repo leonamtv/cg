@@ -4,11 +4,11 @@ Esse repositório contém os trabalhos da disciplina de computação gráfica do
 
 ## Table of Contents 
 
-* [Tutoriais](Tutoriais)
-  * [Tutorial 1]("Tutorial 1")
-  * [Tutorial 2]("Tutorial 2")
-  * [Tutorial 3]("Tutorial 3")
-  * [Tutorial 4]("Tutorial 4")
+- [Tutoriais](Tutoriais)
+  - [Tutorial 1](#tutorial_1)
+  - [Tutorial 2](#tutorial_2)
+  - [Tutorial 3](#tutorial_3)
+  - [Tutorial 4](#tutorial_4)
 
 ## Tutoriais
 
