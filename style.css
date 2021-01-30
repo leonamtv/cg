@@ -160,7 +160,7 @@ button:hover {
   
     .wrapper {
         position: fixed;
-        top : 450px;
+        top : 500px;
         grid-template-columns: auto;
     }
     
