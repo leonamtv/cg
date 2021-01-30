@@ -146,6 +146,7 @@ button:hover {
     }
     
     .wrapper {
+        margin-top: 100px;
         grid-template-columns: auto;
     }
 }
