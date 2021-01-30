@@ -5,7 +5,7 @@ Esse repositório contém os trabalhos da disciplina de computação gráfica do
 <table>
     <tr>
         <td>
-            <iframe href='https://leonamtv.github.io/cg/primeiro_tutorial/index.html'></iframe>
+            <iframe src="https://leonamtv.github.io/cg/primeiro_tutorial/index.html"></iframe>
         </td>
     </tr>
 </table>
