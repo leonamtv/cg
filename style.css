@@ -159,7 +159,6 @@ button:hover {
     }
 
     .wrapper {
-        position: fixed;
         left : 50%;
         transform: translate(-50%, 0);
         top: 100px;
