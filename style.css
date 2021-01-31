@@ -34,7 +34,7 @@
 
 body {
     background-color: var(--bg);
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 .title {
