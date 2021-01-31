@@ -34,18 +34,16 @@
 
 body {
     background-color: var(--bg);
-    overflow-y: scroll;
 }
 
 .title {
-    position: fixed;
+    position: relative;
     display: grid;
-    width: 100%;
+    width: 100vw;
     height : 6vh;
     background: var(--bg);
     grid-template-columns: 5% 75% 20%;
     vertical-align: middle;
-    padding : 20px; 
 }
 
 .title img {
@@ -53,9 +51,13 @@ body {
     display: inline-block;
     width : 50px;
     margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .title h1 {
+    margin-left: 20px;
+    margin-top: 20px;
     font-size: 40px;
     display: inline-block;
     margin-right : 20px;
@@ -63,8 +65,8 @@ body {
 }
 
 .title div {
+    margin-top: 20px;
     float: right;
-    margin-right: 20px;
 }
 
 button {
@@ -95,7 +97,7 @@ button:hover {
 }
 
 .wrapper {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left : 50%;
     transform: translate(-50%, -50%);
@@ -104,7 +106,6 @@ button:hover {
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
-    padding-bottom: 50px;
 }
 
 .wrapper div {
@@ -159,9 +160,11 @@ button:hover {
     }
 
     .wrapper {
+        width: 80%;
+        position: relative;
         left : 50%;
         transform: translate(-50%, 0);
-        top: 100px;
+        top: 40px;
         grid-template-columns: auto;
     }
     
