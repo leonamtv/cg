@@ -323,7 +323,7 @@
                     vec3.set(translation, -size * 3, -size, 0);
                     mat4.translate(mMatrix, mMatrix, translation);
                     mPushMatrix();
-                    mat4.rotate(mMatrix, mMatrix, degToRad(rCubo), [x, y, z]);
+                    //mat4.rotate(mMatrix, mMatrix, degToRad(rCubo), [x, y, z]);
                     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cuboVertexIndexBuffer);
                     gl.bindBuffer(gl.ARRAY_BUFFER, cubeVertexPositionBuffer);
                     gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, cubeVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
