@@ -21,17 +21,33 @@ Todos os tutoriais estão disponíveis [neste link](https://leonamtv.github.io/c
 
 Printando quadrado e triângulo no canvas. O meu tutorial foi levemente modificado, pois eu renderizei vários cubos e triângulos. Os arquivos para esse tutorial estão disponíveis [aqui](/primeiro_tutorial/), e o resultado está disponível [aqui](https://leonamtv.github.io/cg/primeiro_tutorial/index.html).
 
+<p align="center">
+  <img src='./assets/tutoriais/primeiro.png' width='400'>
+</p>
+
 ### Tutorial 2
 
 Colorindo quadrado e triângulo no canvas. Os arquivos para esse tutorial estão disponíveis [aqui](/segundo_tutorial/), e o resultado está disponível [aqui](https://leonamtv.github.io/cg/segundo_tutorial/index.html).
+
+<p align="center">
+  <img src='./assets/tutoriais/segundo.png' width='400'>
+</p>
 
 ### Tutorial 3
 
 Girando quadrado e triângulo no canvas. Os arquivos para esse tutorial estão disponíveis [aqui](/terceiro_tutorial/), e o resultado está disponível [aqui](https://leonamtv.github.io/cg/terceiro_tutorial/index.html).
 
+<p align="center">
+  <img src='./assets/tutoriais/terceiro.png' width='400'>
+</p>
+
 ### Tutorial 4
 
 Girando cubo e pirâmide no canvas. Como eu estou imprimindo vários cubos e pirâmides, resolvi alterar o vetor de rotação a cada um que eu printo (Incremento em 0.01 a cada iteração cada um dos três componentes de rotação). Os arquivos para esse tutorial estão disponíveis [aqui](/quarto_tutorial/), e o resultado está disponível [aqui](https://leonamtv.github.io/cg/quarto_tutorial/index.html).
+
+<p align="center">
+  <img src='./assets/tutoriais/quarto.png' width='400'>
+</p>
 
 ### Tutorial 5
 
@@ -45,9 +61,41 @@ Girando um cubo com textura no canvas. Nesse tutorial, minha variação foi alte
 Os resultados estão aqui:
 
 1. [link para o quinto_tutorial v1](https://leonamtv.github.io/cg/quinto_tutorial/index.html)
+
+
 2. [link para o quinto_tutorial v2](https://leonamtv.github.io/cg/quinto_tutorial_1/index.html)
+
+
 3. [link para o quinto_tutorial v3](https://leonamtv.github.io/cg/quinto_tutorial_2/index.html)
+
+
 4. [link para o quinto_tutorial v4](https://leonamtv.github.io/cg/quinto_tutorial_3/index.html)
+
+<table>
+  <tr>
+    <td>
+      <p align="center">
+        <img src='./assets/tutoriais/quinto_v1.png' width='400'>
+      </p>    
+    </td>
+    <td>
+      <p align="center">
+        <img src='./assets/tutoriais/quinto_v2.png' width='400'>
+      </p>
+    </td>
+    <td>
+      <p align="center">
+        <img src='./assets/tutoriais/quinto_v3.png' width='400'>
+      </p>
+    </td>
+    <td>
+      <p align="center">
+        <img src='./assets/tutoriais/quinto_v4.png' width='400'>
+      </p>
+    </td>
+  </tr>
+</table>
+
 
 ----
 Autor: [leonamtv](https://github.com/leonamtv)
