@@ -37,17 +37,17 @@ Girando cubo e pirâmide no canvas. Como eu estou imprimindo vários cubos e pir
 
 Girando um cubo com textura no canvas. Nesse tutorial, minha variação foi alterar o arquivod de textura, fazendo quatro versões do mesmo tutoral. Os arquivos para estes estão listados a seguir:
 
-1. [quinto_tutorial v1](/quinto_tutorial/)
-2. [quinto_tutorial v2](/quinto_tutorial_1/)
-3. [quinto_tutorial v3](/quinto_tutorial_2/)
-4. [quinto_tutorial v4](/quinto_tutorial_3/)
+1. [arquivos do quinto_tutorial v1](/quinto_tutorial/)
+2. [arquivos do quinto_tutorial v2](/quinto_tutorial_1/)
+3. [arquivos do quinto_tutorial v3](/quinto_tutorial_2/)
+4. [arquivos do quinto_tutorial v4](/quinto_tutorial_3/)
 
 Os resultados estão aqui:
 
-1. [quinto_tutorial v1](https://leonamtv.github.io/cg/quinto_tutorial/index.html)
-2. [quinto_tutorial v2](https://leonamtv.github.io/cg/quinto_tutorial_1/index.html)
-3. [quinto_tutorial v3](https://leonamtv.github.io/cg/quinto_tutorial_2/index.html)
-4. [quinto_tutorial v4](https://leonamtv.github.io/cg/quinto_tutorial_3/index.html)
+1. [link para o quinto_tutorial v1](https://leonamtv.github.io/cg/quinto_tutorial/index.html)
+2. [link para o quinto_tutorial v2](https://leonamtv.github.io/cg/quinto_tutorial_1/index.html)
+3. [link para o quinto_tutorial v3](https://leonamtv.github.io/cg/quinto_tutorial_2/index.html)
+4. [link para o quinto_tutorial v4](https://leonamtv.github.io/cg/quinto_tutorial_3/index.html)
 
 ----
 Autor: [leonamtv](https://github.com/leonamtv)
