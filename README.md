@@ -61,14 +61,8 @@ Girando um cubo com textura no canvas. Nesse tutorial, minha variação foi alte
 Os resultados estão aqui:
 
 1. [link para o quinto_tutorial v1](https://leonamtv.github.io/cg/quinto_tutorial/index.html)
-
-
 2. [link para o quinto_tutorial v2](https://leonamtv.github.io/cg/quinto_tutorial_1/index.html)
-
-
 3. [link para o quinto_tutorial v3](https://leonamtv.github.io/cg/quinto_tutorial_2/index.html)
-
-
 4. [link para o quinto_tutorial v4](https://leonamtv.github.io/cg/quinto_tutorial_3/index.html)
 
 <table>
@@ -76,7 +70,7 @@ Os resultados estão aqui:
     <td>
       <p align="center">
         <img src='./assets/tutoriais/quinto_v1.png' width='400'>
-      </p>    
+      </p>
     </td>
     <td>
       <p align="center">
@@ -95,7 +89,6 @@ Os resultados estão aqui:
     </td>
   </tr>
 </table>
-
 
 ----
 Autor: [leonamtv](https://github.com/leonamtv)
