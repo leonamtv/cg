@@ -1,3 +1,29 @@
+// function triangle () {
+
+//   triangleVertexPositionBuffer = gl.createBuffer();
+//   gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
+//   var vertices = [
+//     0.0, 1.0, 0.0,
+//     -1.0,-1.0, 0.0,
+//     1.0,-1.0, 0.0
+//   ];
+//   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+  
+//   triangleVertexPositionBuffer.itemSize = 3;
+//   triangleVertexPositionBuffer.numItems = 3;
+
+//   triangleVertexColorBuffer = gl.createBuffer();
+//   gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexColorBuffer);
+//   var cores = [
+//       1.0, 0.0, 0.0, 1.0,
+//       0.0, 1.0, 0.0, 1.0,
+//       0.0, 0.0, 1.0, 1.0
+//   ];
+//   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(cores), gl.STATIC_DRAW);
+//   triangleVertexColorBuffer.itemSize = 4;
+//   triangleVertexColorBuffer.numItems = 3;
+// }
+
 function squareBuffer () {
     squareVertexPositionBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);

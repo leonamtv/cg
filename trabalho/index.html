@@ -27,12 +27,13 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="buffers.js"></script>
     <script type="text/javascript" src="draw.js"></script>
+    <script type="text/javascript" src="triangle.js"></script>
     <script type="text/javascript">
       let mMatrix = mat4.create();
       let vMatrix = mat4.create();
       let pMatrix = mat4.create();
       
-      let triangleVertexPositionBuffer;
+      // let triangleVertexPositionBuffer;
       let squareVertexPositionBuffer;
       let vRectangleVertexPositionBuffer
       let hRectangleVertexPositionBuffer
@@ -46,10 +47,10 @@
         var canvas = $('#canvas-webgl')[0];
         iniciarGL(canvas); 
         iniciarShaders();
-        squareBuffer()  
-        hRectangleBuffer();  
-        longHRectangleBuffer();  
-        vRectangleBuffer()
+        // squareBuffer()  
+        // hRectangleBuffer();  
+        // longHRectangleBuffer();  
+        // vRectangleBuffer()
         iniciarAmbiente(); 
         desenharCena();    
       }
@@ -83,6 +84,9 @@
       
         shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
         gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
+
+        shaderProgram.vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor");
+        gl.enableVertexAttribArray(shaderProgram.vertexColorAttribute);
         
         shaderProgram.pMatrixUniform = gl.getUniformLocation(shaderProgram, "uPMatrix");
         shaderProgram.vMatrixUniform = gl.getUniformLocation(shaderProgram, "uVMatrix");
@@ -123,7 +127,7 @@
 
 
       function iniciarAmbiente() {
-        gl.clearColor(0.0, 0.0, 0.0, 1.0);
+        gl.clearColor(0.2, 0.3, 0.4, 1.0);
         gl.enable(gl.DEPTH_TEST);
       }
 
@@ -136,10 +140,12 @@
         
         let translation = vec3.create();
 
-        hRectangle( 0, 0, -16, 4.5, translation )
-        vRectangle( 3, 1, 0, 4.5, translation )
-        longHRectangle ( -1.5, -3, -10, 4.5, translation )
-        longHRectangle ( 7, 11, -20, 4.5, translation )
+        // hRectangle( 0, 0, -16, 4.5, translation )
+        // vRectangle( 3, 1, 0, 4.5, translation )
+        // longHRectangle ( -1.5, -3, -10, 4.5, translation )
+        // longHRectangle ( 7, 11, -20, 4.5, translation )
+
+        triangle([ 1, 0.5, 0.2 ], [ 0, 0, -10 ], 4.5, 1.0, translation)
 
       }
 
@@ -152,20 +158,26 @@
     </script>
     <script id="shader-vs" type="x-shader/x-vertex">
       attribute vec3 aVertexPosition;
+      attribute vec4 aVertexColor;
       
       uniform mat4 uMMatrix;
       uniform mat4 uVMatrix;
       uniform mat4 uPMatrix;
       
+      varying vec4 vColor;
+      
       void main(void) {
-	      gl_Position = uPMatrix * uVMatrix * uMMatrix * vec4(aVertexPosition, 1.0);
+        gl_Position = uPMatrix * uVMatrix * uMMatrix * vec4(aVertexPosition, 1.0);
+        vColor = aVertexColor;
       }
     </script>
     <script id="shader-fs" type="x-shader/x-fragment">
       precision mediump float;
+      varying vec4 vColor;
       
       void main(void) {
-	      gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+        gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+        gl_FragColor = vColor;
       }
     </script>
   </head>
