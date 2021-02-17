@@ -1,4 +1,3 @@
-
 const square = (
     color = [ 0, 0, 0 ],
     translation = [ 0, 0, 0 ],
@@ -9,7 +8,7 @@ const square = (
     let squareVertexPositionBuffer;
     let squareVertexColorBuffer;
 
-    triangleVertexPositionBuffer = gl.createBuffer();
+    squareVertexPositionBuffer = gl.createBuffer();
     
     gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
     

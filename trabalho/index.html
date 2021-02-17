@@ -25,20 +25,16 @@
     </style>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.4.0/gl-matrix-min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="buffers.js"></script>
-    <script type="text/javascript" src="draw.js"></script>
     <script type="text/javascript" src="triangle.js"></script>
+    <script type="text/javascript" src="square.js"></script>
+    <script type="text/javascript" src="hRectangle.js"></script>
+    <script type="text/javascript" src="vRectangle.js"></script>
+    <script type="text/javascript" src="longHRectangle.js"></script>
     <script type="text/javascript">
       let mMatrix = mat4.create();
       let vMatrix = mat4.create();
       let pMatrix = mat4.create();
       
-      // let triangleVertexPositionBuffer;
-      let squareVertexPositionBuffer;
-      let vRectangleVertexPositionBuffer
-      let hRectangleVertexPositionBuffer
-      let longHRectangleVertexPositionBuffer
-
       $(function() {
 	      iniciaWebGL();
       });
@@ -47,10 +43,6 @@
         var canvas = $('#canvas-webgl')[0];
         iniciarGL(canvas); 
         iniciarShaders();
-        // squareBuffer()  
-        // hRectangleBuffer();  
-        // longHRectangleBuffer();  
-        // vRectangleBuffer()
         iniciarAmbiente(); 
         desenharCena();    
       }
@@ -140,12 +132,12 @@
         
         let translation = vec3.create();
 
-        // hRectangle( 0, 0, -16, 4.5, translation )
-        // vRectangle( 3, 1, 0, 4.5, translation )
-        // longHRectangle ( -1.5, -3, -10, 4.5, translation )
-        // longHRectangle ( 7, 11, -20, 4.5, translation )
-
-        triangle([ 1, 0.5, 0.2 ], [ 0, 0, -10 ], 4.5, 1.0, translation)
+        hRectangle( [ 0, 0.71, 1 ], [ 0, 0, -16 ], 4.5, 1.0, translation )
+        vRectangle( [ 0.38, 0, 1 ], [ 3, 1, 0 ], 4.5, 1.0, translation )
+        longHRectangle ( [ 1, 0, 0 ], [ -1.5, -3, -10 ], 4.5, 1.0, translation )
+        longHRectangle ( [ 0.38, 0, 1 ], [ 7, 11, -20 ], 4.5, 1.0, translation )
+        square ( [ 1, 1, 1 ], [ -5, -5, 30 ], 4.5, 1.0, translation)
+        // triangle([ 1, 0.5, 0.2 ], [ 0, 0, -10 ], 4.5, 1.0, translation)
 
       }
 
