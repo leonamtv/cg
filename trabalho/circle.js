@@ -1,7 +1,7 @@
 const circle = (
     color = [ 0, 0, 0 ],
     translation = [ 0, 0, 0 ],
-    size = 4.5,
+    scale = 1.0,
     alpha = 1.0,
     translation_m
 ) => {
@@ -62,6 +62,8 @@ const circle = (
         0.9899497487437185, -0.13567839195979903, 0.0,
         0.9899497487437185, 0.13567839195979903, 0.0
     ];
+
+    for ( let i = 0; i < vertices.length; i ++ ) vertices[i] *= scale
 
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
     

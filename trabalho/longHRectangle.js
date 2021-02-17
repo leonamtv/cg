@@ -2,7 +2,7 @@
 const longHRectangle = (
     color = [ 0, 0, 0 ],
     translation = [ 0, 0, 0 ],
-    size = 4.5,
+    scale = 1.0,
     alpha = 1.0,
     translation_m
 ) => {
@@ -14,11 +14,13 @@ const longHRectangle = (
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexPositionBuffer);
     
     let vertices = [
-        5.0, 0.5, 0.0,
-        -5.0, 0.5, 0.0,
-        5.0,-0.5, 0.0,
-        -5.0,-0.5, 0.0
+         3.0,  0.4, 0.0,
+        -3.0,  0.4, 0.0,
+         3.0, -0.4, 0.0,
+        -3.0, -0.4, 0.0
     ];
+
+    for ( let i = 0; i < vertices.length; i ++ ) vertices[i] *= scale
 
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
     

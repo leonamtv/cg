@@ -1,7 +1,7 @@
 const square = (
     color = [ 0, 0, 0 ],
     translation = [ 0, 0, 0 ],
-    size = 4.5,
+    scale = 1.0,
     alpha = 1.0,
     translation_m
 ) => {
@@ -18,6 +18,8 @@ const square = (
         1.0,-1.0, 0.0,
         -1.0,-1.0, 0.0
     ];
+
+    for ( let i = 0; i < vertices.length; i ++ ) vertices[i] *= scale
 
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
     
