@@ -1,5 +1,5 @@
 
-const hRectangle = (
+const topTrapezium = (
     color = [ 0, 0, 0 ],
     translation = [ 0, 0, 0 ],
     scale = 1.0,
@@ -16,8 +16,8 @@ const hRectangle = (
     let vertices = [
         2.0, 1.0, 0.0,
         -2.0, 1.0, 0.0,
-        2.0,-1.0, 0.0,
-        -2.0,-1.0, 0.0
+        1.0,-1.0, 0.0,
+        -1.0,-1.0, 0.0
     ];
 
     for ( let i = 0; i < vertices.length; i ++ ) vertices[i] *= scale
