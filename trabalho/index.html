@@ -33,21 +33,58 @@
     <script type="text/javascript" src="longHRectangle.js"></script>
     <script type="text/javascript" src="topRounded.js"></script>
     <script type="text/javascript" src="topTrapezium.js"></script>
+    <script type="text/javascript" src="haste.js"></script>
     <script type="text/javascript">
       let mMatrix = mat4.create();
       let vMatrix = mat4.create();
       let pMatrix = mat4.create();
+
+      let mMatrixPilha = [];
       
       $(function() {
 	      iniciaWebGL();
       });
+
+      function degToRad(graus) {
+        return graus * Math.PI / 180;
+      }
+
+      function mPushMatrix() {
+        var copy = mat4.clone(mMatrix);
+        mMatrixPilha.push(copy);
+      }
+
+      function mPopMatrix() {
+        if (mMatrixPilha.length == 0) {
+          throw "inválido popMatrix!";
+        }
+        mMatrix = mMatrixPilha.pop();
+      }
 
       function iniciaWebGL() {
         var canvas = $('#canvas-webgl')[0];
         iniciarGL(canvas); 
         iniciarShaders();
         iniciarAmbiente(); 
-        desenharCena();    
+        tick();    
+      }
+
+
+      var ultimo = 0;
+      function animar() {
+        var agora = new Date().getTime();
+        if (ultimo != 0) {
+          var diferenca = agora - ultimo;
+          rTri += ((90 * diferenca) / 1000.0) % 360.0;
+          rQuad += ((75 * diferenca) / 1000.0) % 360.0;
+        }
+        ultimo = agora;
+      }
+
+      function tick() {
+        requestAnimationFrame(tick);
+        desenharCena();
+        animar();
       }
 
       function iniciarGL(canvas) {
@@ -148,7 +185,11 @@
         topRounded     ( [ 0.90, 0.65, 0.20 ], [  1.80,  2.22,  1 ], 0.20, 1.0, translation )
         vRectangle     ( [ 1.00, 0.90, 0.00 ], [ -0.80, -0.02,  1 ], 0.15, 1.0, translation )
         topTrapezium   ( [ 0.20, 0.10, 0.70 ], [  0.26,  0.19,  1 ], 0.12, 1.0, translation )
-        
+        haste          ( [ 0.20, 0.10, 0.70 ], [  1.50, -1.50,  1 ], 0.07, 1.0, translation )
+      }
+
+      function animar () {
+
       }
 
       function setMatrixUniforms() {

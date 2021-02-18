@@ -1,5 +1,5 @@
 
-const topTrapezium = (
+const haste = (
     color = [ 0, 0, 0 ],
     translation = [ 0, 0, 0 ],
     scale = 1.0,
@@ -14,10 +14,10 @@ const topTrapezium = (
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexPositionBuffer);
     
     let vertices = [
-        2.0, 1.0, 0.0,
-        -2.0, 1.0, 0.0,
-        1.0,-1.0, 0.0,
-        -1.0,-1.0, 0.0
+        4.0, 0.5, 0.0,
+        -4.0, 0.5, 0.0,
+        4.0,-0.5, 0.0,
+        -4.0,-0.5, 0.0
     ];
 
     for ( let i = 0; i < vertices.length; i ++ ) vertices[i] *= scale
@@ -38,13 +38,13 @@ const topTrapezium = (
     
     vertexColorBuffer.itemSize = 4;
     vertexColorBuffer.numItems = 4;
-
+    
+    mPushMatrix();
     vec3.set (translation_m, translation[0], translation[1], translation[2]); 
     mat4.translate(mMatrix, mMatrix, translation_m);
 
-    mPushMatrix();
     var agora = new Date().getTime();
-    vec3.set ( translation_m, 0, -(( agora / 40 ) % 5 ) / 20, 0 );
+    vec3.set ( translation_m, -(( agora / 60 ) % 5 ) / 20, -(( agora / 120 ) % 5 ) / 20, 0 );
     mat4.translate ( mMatrix, mMatrix, translation_m );
     
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexPositionBuffer);
