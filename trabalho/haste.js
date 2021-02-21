@@ -4,6 +4,8 @@ const haste = (
     translation = [ 0, 0, 0 ],
     scale = 1.0,
     alpha = 1.0,
+    radius = 0.5,
+    offset = 0.0,
     translation_m
 ) => {
     let vertexPositionBuffer;
@@ -44,7 +46,12 @@ const haste = (
     mat4.translate(mMatrix, mMatrix, translation_m);
 
     var agora = new Date().getTime();
-    vec3.set ( translation_m, -(( agora / 60 ) % 5 ) / 20, -(( agora / 120 ) % 5 ) / 20, 0 );
+
+    let x = 0;
+    let y = ( agora + offset ) / 240;
+
+    vec3.set ( translation_m, radius * Math.cos ( y ), radius * Math.sin ( y ), 0 );
+
     mat4.translate ( mMatrix, mMatrix, translation_m );
     
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexPositionBuffer);
