@@ -172,25 +172,22 @@
         
         let translation = vec3.create();
 
-        hRectangle     ( [ 0.00, 0.71, 1.00 ], [ -1.00,  0.00, -9 ], 1.00, 1.0, translation )
-        vRectangle     ( [ 0.38, 0.00, 1.00 ], [  3.00,  1.00,  0 ], 1.00, 1.0, translation )
-        longHRectangle ( [ 1.00, 0.00, 0.00 ], [ -2.00, -2.40,  0 ], 1.00, 1.0, translation )
-        longHRectangle ( [ 0.38, 0.00, 1.00 ], [  1.75,  4.20,  1 ], 0.40, 1.0, translation )
-        square         ( [ 1.00, 1.00, 1.00 ], [ -0.20, -1.50,  1 ], 0.50, 1.0, translation )
-        circle         ( [ 0.00, 1.00, 0.30 ], [  0.10, -2.70,  0 ], 0.50, 1.0, translation )
-        circle         ( [ 1.00, 0.00, 1.00 ], [ -1.20,  0.00,  0 ], 0.50, 1.0, translation )
-        circle         ( [ 0.00, 0.30, 0.00 ], [ -1.20, -0.10,  0 ], 0.40, 1.0, translation )
-        circle         ( [ 1.00, 0.40, 0.00 ], [ -1.00,  0.00,  0 ], 0.40, 1.0, translation )
-        lTriangle      ( [ 0.10, 0.38, 0.06 ], [ -0.55,  0.15,  0 ], 0.60, 1.0, translation )
-        topRounded     ( [ 0.90, 0.65, 0.20 ], [  1.80,  2.22,  1 ], 0.20, 1.0, translation )
-        vRectangle     ( [ 1.00, 0.90, 0.00 ], [ -0.80, -0.02,  1 ], 0.15, 1.0, translation )
-        topTrapezium   ( [ 0.20, 0.10, 0.70 ], [  0.26,  0.19,  1 ], 0.12, 1.0, translation )
-        haste          ( [ 0.20, 0.10, 0.70 ], [  1.50, -1.65,  1 ], 0.07, 1.0, 0.155,   0.0, translation )
-        haste          ( [ 0.50, 0.10, 0.70 ], [  0.51, -1.68,  1 ], 0.06, 1.0, 0.125, 100.0, translation )
-      }
-
-      function animar () {
-
+		    //---------------|-------cor--------|  |----translação----||scale||alpha||radius||offset|| translation|
+        hRectangle     ( [ 0.00, 0.71, 1.00 ], [ -1.00,  0.00, -9 ], 1.00, 1.0,                   translation )
+        vRectangle     ( [ 0.38, 0.00, 1.00 ], [  3.00,  1.00,  0 ], 1.00, 1.0,                   translation )
+        longHRectangle ( [ 1.00, 0.00, 0.00 ], [ -2.00, -2.40,  0 ], 1.00, 1.0,                   translation )
+        longHRectangle ( [ 0.38, 0.00, 1.00 ], [  1.75,  4.20,  1 ], 0.40, 1.0,                   translation )
+        square         ( [ 1.00, 1.00, 1.00 ], [ -0.20, -1.50,  1 ], 0.50, 1.0,                   translation )
+        circle         ( [ 0.00, 1.00, 0.30 ], [  0.10, -2.70,  0 ], 0.50, 1.0,                   translation )
+        circle         ( [ 1.00, 0.00, 1.00 ], [ -1.20,  0.00,  0 ], 0.50, 1.0,                   translation )
+        circle         ( [ 0.00, 0.30, 0.00 ], [ -1.20, -0.10,  0 ], 0.40, 1.0,                   translation )
+        circle         ( [ 1.00, 0.40, 0.00 ], [ -1.00,  0.00,  0 ], 0.40, 1.0,                   translation )
+        lTriangle      ( [ 0.10, 0.38, 0.06 ], [ -0.55,  0.15,  0 ], 0.60, 1.0,                   translation )
+        topRounded     ( [ 0.90, 0.65, 0.20 ], [  1.80,  2.22,  1 ], 0.20, 1.0,                   translation )
+        vRectangle     ( [ 1.00, 0.90, 0.00 ], [ -0.80, -0.02,  1 ], 0.15, 1.0,                   translation )
+        topTrapezium   ( [ 0.20, 0.10, 0.70 ], [  0.26,  0.19,  1 ], 0.12, 1.0,                   translation )
+        haste          ( [ 0.20, 0.10, 0.70 ], [  1.50, -1.65,  1 ], 0.07, 1.0,  0.155,    0.0,   translation )
+        haste          ( [ 0.50, 0.10, 0.70 ], [  0.51, -1.68,  1 ], 0.06, 1.0,  0.125,  100.0,   translation )
       }
 
       function setMatrixUniforms() {
