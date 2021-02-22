@@ -1,4 +1,3 @@
-
 const haste = (
     color = [ 0, 0, 0 ],
     translation = [ 0, 0, 0 ],
@@ -16,10 +15,10 @@ const haste = (
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexPositionBuffer);
     
     let vertices = [
-        4.0, 0.5, 0.0,
-        -4.0, 0.5, 0.0,
-        4.0,-0.5, 0.0,
-        -4.0,-0.5, 0.0
+         4.0,  0.5, 0.0,
+        -4.0,  0.5, 0.0,
+         4.0, -0.5, 0.0,
+        -4.0, -0.5, 0.0
     ];
 
     for ( let i = 0; i < vertices.length; i ++ ) vertices[i] *= scale
@@ -47,10 +46,9 @@ const haste = (
 
     var agora = new Date().getTime();
 
-    let x = 0;
-    let y = ( agora + offset ) / 240;
+    let i = ( agora + offset ) / 240;
 
-    vec3.set ( translation_m, radius * Math.cos ( y ), radius * Math.sin ( y ), 0 );
+    vec3.set ( translation_m, radius * Math.cos ( i ), radius * Math.sin ( i ), 0 );
 
     mat4.translate ( mMatrix, mMatrix, translation_m );
     
