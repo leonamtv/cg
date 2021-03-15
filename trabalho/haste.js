@@ -5,6 +5,7 @@ const haste = (
     alpha = 1.0,
     radius = 0.5,
     offset = 0.0,
+    velocidade = 1.0,
     translation_m
 ) => {
     let vertexPositionBuffer;
@@ -46,7 +47,7 @@ const haste = (
 
     var agora = new Date().getTime();
 
-    let i = ( agora + offset ) / 240;
+    let i = velocidade * ( agora + offset ) / 240; 
 
     vec3.set ( translation_m, radius * Math.cos ( i ), radius * Math.sin ( i ), 0 );
 

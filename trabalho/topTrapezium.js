@@ -4,6 +4,7 @@ const topTrapezium = (
     translation = [ 0, 0, 0 ],
     scale = 1.0,
     alpha = 1.0,
+    velocidade = 1.0,
     translation_m
 ) => {
     let vertexPositionBuffer;
@@ -44,7 +45,7 @@ const topTrapezium = (
 
     mPushMatrix();
     var agora = new Date().getTime();
-    vec3.set ( translation_m, 0, -(( agora / 120 ) % 5 ) / 20, 0 );
+    vec3.set ( translation_m, 0, -(( agora * velocidade / 120 ) % 5 ) / 20, 0 );
     mat4.translate ( mMatrix, mMatrix, translation_m );
     
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexPositionBuffer);
