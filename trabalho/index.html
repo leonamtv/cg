@@ -18,8 +18,16 @@
         transform: translate(-50%, -50%);
         text-align: center;
       }
-      h1, h2 {
+      #canvas-webgl {
+
         margin-bottom: 20px;
+      }
+      h1, h2, p {
+        margin-bottom: 10px;
+        color: white;
+      }
+      p {
+        margin-bottom: 5px;
         color: white;
       }
     </style>
@@ -34,13 +42,18 @@
     <script type="text/javascript" src="topRounded.js"></script>
     <script type="text/javascript" src="topTrapezium.js"></script>
     <script type="text/javascript" src="haste.js"></script>
-    <!-- <script type="text/javascript" src="cubo.js"></script> -->
     <script type="text/javascript">
       let mMatrix = mat4.create();
       let vMatrix = mat4.create();
       let pMatrix = mat4.create();
 
+      let shift = 0;
+
       var rCubo = 0;
+
+      let xCam = 0
+      let yCam = 0
+      let zCam = 0
 
       let xRot = 0;
       let yRot = 0;
@@ -88,15 +101,34 @@
       }
 
       function eventoTeclaPress ( evento ) {
+        console.log(shift)
+        if ( evento.shiftKey ) {
+          shift = 1
+        } else {
+          shift = 0
+        }
         if (evento.keyCode == 37 || evento.keyCode == 40) {
-          console.log("decrease")
           vel -= ( vel > 0 ) ? 0.1 : 0.0
         }
         if (evento.keyCode == 38 || evento.keyCode == 39){
-          console.log("increase")
           vel += 0.1
         }
-        console.log(vel)
+        if (evento.keyCode == 65){
+          xCam += 0.1
+          mat4.rotate(vMatrix, vMatrix, degToRad(shift == 0 ? 1 : -1), [0, 1, 0]);
+        }
+        if (evento.keyCode == 87){
+          yCam += 0.1
+          mat4.rotate(vMatrix, vMatrix, degToRad(shift == 0 ? 1 : -1), [1, 0, 0]);
+        }
+        if (evento.keyCode == 83){
+          zCam += 0.1
+          mat4.rotate(vMatrix, vMatrix, degToRad(shift == 0 ? 1 : -1), [-1, 0, 0]);
+        }
+        if (evento.keyCode == 68){
+          zCam -= 0.1
+          mat4.rotate(vMatrix, vMatrix, degToRad(shift == 0 ? 1 : -1), [0, -1, 0]);
+        }
       }
 
       function eventoTeclaSolta ( evento ) {
@@ -271,9 +303,7 @@
       }
 
       function iniciarAmbiente() {
-        // gl.clearColor(0.2, 0.6, 0.8, 1.0);
-        gl.clearColor(0.0, 0.0, 0.0, 1.0);
-        // gl.clearColor(0.2, 0.3, 0.4, 1.0);
+        gl.clearColor(0.2, 0.3, 0.4, 1.0);
         gl.enable(gl.DEPTH_TEST);
       }
 
@@ -281,11 +311,8 @@
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
         mat4.perspective(pMatrix, 45, gl.viewportWidth / gl.viewportHeight, 0.1, 100.0);
         mat4.identity(mMatrix);
-        mat4.identity(vMatrix);
         
         let translation = vec3.create();
-        
-        
         let start_y = 0.0
         let size = 15
         
@@ -316,7 +343,6 @@
         gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cuboVertexIndexBuffer);
         gl.bindBuffer(gl.ARRAY_BUFFER, cubeVertexPositionBuffer);
         gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, cubeVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
-        gl.bindBuffer(gl.ARRAY_BUFFER, cuboVertexTextureCoordBuffer);
         gl.vertexAttribPointer(shaderProgram.vertexTextureCoordAttribute, cuboVertexTextureCoordBuffer.itemSize, gl.FLOAT, false, 0, 0);
         mat4.rotate(mMatrix, mMatrix, degToRad(rCubo), [xRot, yRot, zRot]);
         setMatrixUniforms();
@@ -335,6 +361,9 @@
           xRot  += ((90*diferenca)/1000.0) % 360.0;
           yRot  += ((90*diferenca)/1000.0) % 360.0;
           zRot  += ((90*diferenca)/1000.0) % 360.0;
+          xCam  += ((90*diferenca)/1000.0) % 360.0;
+          yCam  += ((90*diferenca)/1000.0) % 360.0;
+          zCam  += ((90*diferenca)/1000.0) % 360.0;
         }
         ultimo = agora;
       }
@@ -383,7 +412,9 @@
       <h2>Leonam Teixeira de Vasconcelos</h2>
       <canvas id="canvas-webgl" width="500px" height="500px" style="border:none">
       </canvas>
-      <h2>Setinhas para acelerar ou desacelerar o trenzinho.</h2>
+      <p>- Setinhas para acelerar ou desacelerar o trenzinho.</p>
+      <p>- ADSW Para movimentar a câmera</p>
+      <p>- ADSW + shift Para movimentar a câmera no sentido contrário</p>
   </div>
   </body>
 </html> 
